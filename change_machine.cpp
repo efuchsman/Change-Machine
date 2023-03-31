@@ -14,18 +14,18 @@ private:
 public:
   void changeMaker() const
   {
-    float amount;
+    double amount;
 
     while (true)
     {
       std::cout << "Enter an amount as a floating-point number: ";
-      if (std::cin >> amount && amount >= 0)
+      if (std::cin >> amount && amount >= 0 && amount <= 2147483647)
       {
         break;
       }
       else
       {
-        std::cout << "Error please input a valid amount greater than zero" << std::endl;
+        std::cout << "Error: please input a valid amount between zero and 2147483647" << std::endl;
         std::cin.clear();
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
       }
