@@ -22,6 +22,7 @@ Change-Machine takes in a user-input and outputs change using the minimum number
 2. Launch VScode from the proper file path on your local machine: `code .`
 3. Startup the application by running the binary executable file in your terminal: `./change_machine`
 4. (Optional) Should something happen to binary file, regenerate another: `g++ change_machine.cpp -o change_machine`
+5. Exit the running application: `crtl-c`
 
 <h2>Valid Input Cases</h2>
 
