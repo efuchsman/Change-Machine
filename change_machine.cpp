@@ -18,7 +18,7 @@ public:
 
     while (true)
     {
-      std::cout << "Enter an amount xxx.xx: ";
+      std::cout << "Enter an amount as a floating-point number: ";
       if (std::cin >> amount && amount >= 0)
       {
         break;
