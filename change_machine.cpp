@@ -25,7 +25,7 @@ public:
       }
       else
       {
-        std::cout << "Error: please input a valid amount between zero and 2147483647" << std::endl;
+        std::cout << "Error: please input a valid amount" << std::endl;
         std::cin.clear();
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
       }
