@@ -37,7 +37,7 @@ public:
     changeHash.insert(make_pair(1, 0));
 
     int dollarArray[] = {100, 20, 10, 5, 1};
-    float changeArray[] = {25, 10, 5, 1};
+    int changeArray[] = {25, 10, 5, 1};
 
     for (int i = 0; i < 5; i++)
     {
