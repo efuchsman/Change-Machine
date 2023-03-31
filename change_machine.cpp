@@ -51,7 +51,7 @@ public:
 
     for (int i = 0; i < 4; i++)
     {
-      float index = changeArray[i];
+      int index = changeArray[i];
       while (changeAmount >= index)
       {
         changeAmount -= index;
