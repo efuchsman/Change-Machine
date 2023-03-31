@@ -98,5 +98,11 @@ int main()
 
   std::cout << "-----------" << std::endl;
 
+  float amount5 = 112.15;
+  ChangeMachine machine5(amount5);
+  machine5.changeMaker();
+
+  std::cout << "-----------" << std::endl;
+
   return 0;
 }

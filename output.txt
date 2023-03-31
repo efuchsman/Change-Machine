@@ -42,3 +42,14 @@ Dimes: 0
 Nickels: 0
 Pennies: 0
 -----------
+$112.15
+Hundreds: 1
+Twenties: 0
+Tens: 1
+Fives: 0
+Singles: 2
+Quarters: 0
+Dimes: 1
+Nickels: 1
+Pennies: 0
+-----------
