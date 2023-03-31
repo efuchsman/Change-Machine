@@ -1,0 +1,11 @@
+$127.45
+$0.45
+Hundreds: 1
+Twenties: 1
+Tens: 0
+Fives: 1
+Singles: 2
+Quarters: 1
+Dimes: 1
+Nickels: 1
+Pennies: 4
