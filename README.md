@@ -1,4 +1,4 @@
-<h1 align="center">Change-Machine</h1>
+<h1 align="center">Change Machine</h1>
  
  <div align="center">
   <a href="https://github.com/efuchsman/Change-Machine">
