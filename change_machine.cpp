@@ -12,14 +12,27 @@ private:
   float amount;
 
 public:
-  ChangeMachine(float amount)
-  {
-    this->amount = amount;
-    std::cout << "$" << amount << std::endl;
-  }
-
   void changeMaker() const
   {
+    float amount;
+
+    while (true)
+    {
+      std::cout << "Enter an amount xxx.xx: ";
+      if (std::cin >> amount && amount >= 0)
+      {
+        break;
+      }
+      else
+      {
+        std::cout << "Error please input a valid amount greater than zero" << std::endl;
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+      }
+    }
+
+    std::cout << "$" << amount << std::endl;
+
     int dollarAmount = static_cast<int>(amount);
     int changeAmount = static_cast<int>(round((amount - dollarAmount) * 100));
 
@@ -74,35 +87,7 @@ public:
 
 int main()
 {
-  float amount1 = 127.45;
-  ChangeMachine machine1(amount1);
-  machine1.changeMaker();
-
-  std::cout << "-----------" << std::endl;
-
-  float amount2 = 1202.85;
-  ChangeMachine machine2(amount2);
-  machine2.changeMaker();
-
-  std::cout << "-----------" << std::endl;
-
-  float amount3 = 0.78;
-  ChangeMachine machine3(amount3);
-  machine3.changeMaker();
-
-  std::cout << "-----------" << std::endl;
-
-  float amount4 = 77.00;
-  ChangeMachine machine4(amount4);
-  machine4.changeMaker();
-
-  std::cout << "-----------" << std::endl;
-
-  float amount5 = 112.15;
-  ChangeMachine machine5(amount5);
-  machine5.changeMaker();
-
-  std::cout << "-----------" << std::endl;
-
+  ChangeMachine machine;
+  machine.changeMaker();
   return 0;
 }
