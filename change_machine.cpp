@@ -22,7 +22,6 @@ public:
   {
     float dollarAmount = floor(amount);
     float changeAmount = round((amount - dollarAmount) * 100) / 100;
-    std::cout << "$" << changeAmount << std::endl;
 
     unordered_map<int, int> dollarHash;
     dollarHash.insert(make_pair(100, 0));
@@ -75,8 +74,26 @@ public:
 
 int main()
 {
-  float amount = 127.45;
-  ChangeMachine machine(amount);
-  machine.changeMaker();
+  float amount1 = 127.45;
+  ChangeMachine machine1(amount1);
+  machine1.changeMaker();
+
+  std::cout << "-----------" << std::endl;
+
+  float amount2 = 1202.85;
+  ChangeMachine machine2(amount2);
+  machine2.changeMaker();
+
+  std::cout << "-----------" << std::endl;
+
+  float amount3 = 0.77;
+  ChangeMachine machine3(amount3);
+  machine3.changeMaker();
+
+  std::cout << "-----------" << std::endl;
+
+  float amount4 = 77.00;
+  ChangeMachine machine4(amount4);
+  machine4.changeMaker();
   return 0;
 }
