@@ -20,8 +20,9 @@ public:
 
   void changeMaker() const
   {
-    float changeAmount, dollarAmount;
-    changeAmount = modf(amount, &dollarAmount);
+    float dollarAmount = floor(amount);
+    float changeAmount = round((amount - dollarAmount) * 100) / 100;
+    std::cout << "$" << changeAmount << std::endl;
 
     unordered_map<int, int> dollarHash;
     dollarHash.insert(make_pair(100, 0));
@@ -30,36 +31,33 @@ public:
     dollarHash.insert(make_pair(5, 0));
     dollarHash.insert(make_pair(1, 0));
 
-    unordered_map<double, int> changeHash;
-    changeHash.insert(make_pair(0.25, 0));
-    changeHash.insert(make_pair(0.10, 0));
-    changeHash.insert(make_pair(0.05, 0));
-    changeHash.insert(make_pair(0.01, 0));
+    unordered_map<float, int> changeHash;
+    changeHash.insert(make_pair(0.25f, 0));
+    changeHash.insert(make_pair(0.10f, 0));
+    changeHash.insert(make_pair(0.05f, 0));
+    changeHash.insert(make_pair(0.01f, 0));
 
     int dollarArray[] = {100, 20, 10, 5, 1};
-    double changeArray[] = {0.25, 0.10, 0.05, 0.01};
+    float changeArray[] = {0.25f, 0.10f, 0.05f, 0.01f};
 
-    int dollarIndex = 0;
-    int changeIndex = 0;
-
-    while (dollarAmount > 0)
+    for (int i = 0; i < 5; i++)
     {
-      while (dollarAmount > dollarArray[dollarIndex])
+      int index = dollarArray[i];
+      while (dollarAmount >= index)
       {
-        dollarAmount -= dollarArray[dollarIndex];
-        dollarHash[dollarArray[dollarIndex]]++;
+        dollarAmount -= index;
+        dollarHash[index]++;
       }
-      dollarIndex++;
     }
 
-    while (changeAmount > 0)
+    for (int i = 0; i < 4; i++)
     {
-      while (changeAmount > changeArray[changeIndex])
+      float index = changeArray[i];
+      while (changeAmount >= index)
       {
-        changeAmount -= changeArray[changeIndex];
-        changeHash[changeArray[changeIndex]]++;
+        changeAmount -= index;
+        changeHash[index]++;
       }
-      changeIndex++;
     }
 
     std::cout << "Hundreds: " << dollarHash[100] << std::endl;
@@ -68,16 +66,16 @@ public:
     std::cout << "Fives: " << dollarHash[5] << std::endl;
     std::cout << "Singles: " << dollarHash[1] << std::endl;
 
-    std::cout << "Quarters: " << changeHash[0.25] << std::endl;
-    std::cout << "Dimes: " << changeHash[0.10] << std::endl;
-    std::cout << "Nickels: " << changeHash[0.05] << std::endl;
-    std::cout << "Pennies: " << changeHash[0.01] << std::endl;
+    std::cout << "Quarters: " << changeHash[0.25f] << std::endl;
+    std::cout << "Dimes: " << changeHash[0.10f] << std::endl;
+    std::cout << "Nickels: " << changeHash[0.05f] << std::endl;
+    std::cout << "Pennies: " << changeHash[0.01f] << std::endl;
   }
 };
 
 int main()
 {
-  float amount = 123.45;
+  float amount = 127.45;
   ChangeMachine machine(amount);
   machine.changeMaker();
   return 0;
