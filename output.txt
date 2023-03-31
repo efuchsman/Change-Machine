@@ -5,9 +5,9 @@ Tens: 0
 Fives: 1
 Singles: 2
 Quarters: 1
-Dimes: 1
-Nickels: 1
-Pennies: 4
+Dimes: 2
+Nickels: 0
+Pennies: 0
 -----------
 $1202.85
 Hundreds: 12
@@ -20,7 +20,7 @@ Dimes: 1
 Nickels: 0
 Pennies: 0
 -----------
-$0.77
+$0.78
 Hundreds: 0
 Twenties: 0
 Tens: 0
@@ -29,7 +29,7 @@ Singles: 0
 Quarters: 3
 Dimes: 0
 Nickels: 0
-Pennies: 1
+Pennies: 3
 -----------
 $77
 Hundreds: 0
