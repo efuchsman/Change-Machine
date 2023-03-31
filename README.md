@@ -23,13 +23,32 @@ Change-Machine takes in a user-input and outputs change using the minimum number
 3. Startup the application by running the binary executable file in your terminal: `./change_machine`
 4. (Optional) Should something happen to binary file, regenerate another: `g++ change_machine.cpp -o change_machine`
 
-<h2>Example Test Cases</h2>
+<h2>Valid Input Cases</h2>
 
 ### Input:
 
-![image](https://user-images.githubusercontent.com/104859844/229231780-0e6cfcd1-d29e-453a-a436-ea6ec3c56f9d.png)
+![image](https://user-images.githubusercontent.com/104859844/229233410-00267a10-3990-48f9-8096-a945b5c73cdf.png)
 
 ### Output: 
 
-![image](https://user-images.githubusercontent.com/104859844/229232063-d32d9c84-5f1e-4999-af3f-9aa277bc9365.png)
+![image](https://user-images.githubusercontent.com/104859844/229233655-42c1deb4-8288-4cf8-b3a8-47218c03190a.png)
+
+### Input:
+
+![image](https://user-images.githubusercontent.com/104859844/229234264-3478befb-4220-406c-9e3c-9b345d1ef513.png)
+
+### Output
+
+![image](https://user-images.githubusercontent.com/104859844/229234370-0e9c91ac-711c-4326-91ef-f67dd22f509c.png)
+
+### Input
+
+![image](https://user-images.githubusercontent.com/104859844/229234638-664318ec-dc5d-4b57-9c5e-c1b047030c9e.png)
+
+### Output 
+
+![image](https://user-images.githubusercontent.com/104859844/229234738-28eb13c0-797a-41e6-b2c7-54da7fd119fc.png)
+
+
+
 
